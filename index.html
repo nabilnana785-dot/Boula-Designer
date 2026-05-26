@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boula Designer</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* Navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(15,23,42,.92);
+backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#60a5fa;
+}
+
+.navbar ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.navbar a:hover{
+color:#60a5fa;
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+linear-gradient(135deg,#1e3a8a,#7e22ce);
+}
+
+.hero-content{
+animation:fade 1.2s;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+opacity:.9;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#3b82f6;
+color:white;
+text-decoration:none;
+border-radius:12px;
+transition:.3s;
+font-weight:bold;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+background:#2563eb;
+}
+
+/* Pricing */
+
+.pricing{
+padding:90px 8%;
+text-align:center;
+}
+
+.title{
+font-size:34px;
+margin-bottom:15px;
+}
+
+.offer{
+color:#facc15;
+font-size:24px;
+margin-bottom:35px;
+animation:pulse 2s infinite;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111827;
+padding:25px;
+border-radius:20px;
+transition:.4s;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+animation:slide .8s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.price{
+font-size:28px;
+color:#22c55e;
+margin:15px 0;
+}
+
+.old{
+display:block;
+color:#ef4444;
+text-decoration:line-through;
+font-size:15px;
+margin-top:5px;
+}
+
+.card p{
+line-height:1.8;
+opacity:.85;
+}
+
+.card .btn{
+margin-top:20px;
+width:100%;
+}
+
+.warning{
+margin-top:35px;
+font-size:20px;
+opacity:.8;
+}
+
+/* Reviews */
+
+.reviews{
+padding:70px 8%;
+text-align:center;
+background:#111827;
+}
+
+.reviews h2{
+margin-bottom:30px;
+}
+
+.review-container{
+display:flex;
+gap:20px;
+overflow:auto;
+padding-bottom:10px;
+}
+
+.review{
+min-width:280px;
+background:#1f2937;
+padding:20px;
+border-radius:15px;
+}
+
+/* Footer */
+
+footer{
+padding:30px;
+text-align:center;
+background:#0b1120;
+}
+
+.social{
+margin-top:15px;
+}
+
+.social i{
+font-size:22px;
+margin:0 10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.social i:hover{
+transform:scale(1.2);
+color:#60a5fa;
+}
+
+/* Animations */
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes slide{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes pulse{
+0%{opacity:.6;}
+50%{opacity:1;}
+100%{opacity:.6;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<header class="navbar">
+<div class="logo">Boula Designer</div>
+
+<ul>
+<li><a href="#home">الرئيسية</a></li>
+<li><a href="#pricing">الأسعار</a></li>
+<li><a href="#reviews">الآراء</a></li>
+</ul>
+</header>
+
+<!-- Hero -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+اطلب موقعك الإلكتروني الآن بأفضل الأسعار
+</h1>
+
+<p>
+نصمم مواقع احترافية لأي خدمة أو مشروع بسيط أو ضخم
+بتصميم عصري وتجربة استخدام قوية.
+</p>
+
+<a href="#pricing" class="btn">
+شاهد الأسعار
+</a>
+
+</div>
+</section>
+
+<!-- Pricing -->
+
+<section class="pricing" id="pricing">
+
+<h2 class="title">
+أسعار تصميم المواقع
+</h2>
+
+<div class="offer">
+🔥 العرض لمدة محدودة 🔥
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>موقع خدمة بسيط</h3>
+<div class="price">
+200 جنيه
+<span class="old">350 جنيه</span>
+</div>
+<p>
+موقع بسيط مناسب للخدمات الصغيرة والاحتياجات المحدودة.
+</p>
+
+<a class="btn"
+href="https://wa.me/201558247219?text=السلام عليكم، أريد حجز موقع خدمة بسيط">
+احجز الآن
+</a>
+</div>
+
+<div class="card">
+<h3>موقع خدمة احترافي</h3>
+<div class="price">
+300 جنيه
+<span class="old">450 جنيه</span>
+</div>
+<p>
+موقع احترافي يحتوي على مميزات متقدمة وأفكار غير محدودة.
+</p>
+
+<a class="btn"
+href="https://wa.me/201558247219?text=السلام عليكم، أريد حجز موقع خدمة احترافي">
+احجز الآن
+</a>
+</div>
+
+<div class="card">
+<h3>موقع مشروع بسيط</h3>
+<div class="price">
+400 جنيه
+<span class="old">550 جنيه</span>
+</div>
+<p>
+موقع مناسب للمشروعات الصغيرة والمتوسطة.
+</p>
+
+<a class="btn"
+href="https://wa.me/201558247219?text=السلام عليكم، أريد حجز موقع مشروع بسيط">
+احجز الآن
+</a>
+</div>
+
+<div class="card">
+<h3>موقع مشروع احترافي</h3>
+<div class="price">
+450 جنيه
+<span class="old">600 جنيه</span>
+</div>
+<p>
+موقع متكامل للمشروعات الكبيرة وتجربة استخدام قوية.
+</p>
+
+<a class="btn"
+href="https://wa.me/201558247219?text=السلام عليكم، أريد حجز موقع مشروع احترافي">
+احجز الآن
+</a>
+</div>
+
+<div class="card">
+<h3>موقع مميز يحتوي على كل شيء</h3>
+<div class="price">
+500 جنيه
+</div>
+<p>
+موقع مميز يحتوي على كل ما يريده العميل من تصميم ومميزات.
+</p>
+
+<a class="btn"
+href="https://wa.me/201558247219?text=السلام عليكم، أريد حجز الموقع المميز">
+احجز الآن
+</a>
+</div>
+
+</div>
+
+<div class="warning">
+إذا لم يعجبك الموقع لا تأخذه.
+</div>
+
+</section>
+
+<!-- Reviews -->
+
+<section class="reviews" id="reviews">
+
+<h2>آراء العملاء</h2>
+
+<div class="review-container">
+
+<div class="review">
+⭐⭐⭐⭐⭐ <br><br>
+موقع رائع وسريع جداً.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ <br><br>
+تصميم احترافي وتعامل ممتاز.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ <br><br>
+تنفيذ سريع وجودة قوية.
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<p>
+© 2026 Boula Designer
+</p>
+
+<div class="social">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-whatsapp"></i>
+<i class="fab fa-instagram"></i>
+</div>
+
+</footer>
+
+</body>
+</html>
